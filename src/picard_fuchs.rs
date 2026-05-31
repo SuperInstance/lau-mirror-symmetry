@@ -84,8 +84,8 @@ impl PicardFuchsEquation {
         let omega0 = self.fundamental_period(z, terms);
         // ω₁ has a logarithmic term: ω₁ = (1/2πi) ω₀ log(z) + ...
         // The mirror map is t = ω₁/ω₀
-        let t = omega0.ln() / (2.0 * std::f64::consts::PI);
-        t
+        
+        omega0.ln() / (2.0 * std::f64::consts::PI)
     }
 
     /// Verify the indicial equation has a maximally unipotent monodromy.
@@ -98,6 +98,7 @@ impl PicardFuchsEquation {
     /// Compute the monodromy matrix around z=0.
     /// For maximally unipotent monodromy, the matrix is upper-triangular
     /// with 1s on the diagonal (Jordan block).
+    #[allow(clippy::needless_range_loop)]
     pub fn monodromy_matrix(&self) -> Vec<Vec<f64>> {
         let n = self.order;
         let mut m = vec![vec![0.0; n]; n];

@@ -1,3 +1,4 @@
+#![deny(unsafe_code)]
 //! # lau-mirror-symmetry
 //!
 //! Mirror symmetry — the duality between symplectic and complex geometry.

@@ -106,11 +106,10 @@ impl AgentDuality {
         }
         // For CY 3-fold mirror: h^{1,1}_A = h^{2,1}_B and vice versa
         // Check the swap of key Hodge numbers
-        if cap_a.len() >= 2 && cap_b.len() >= 3 {
-            if cap_a[1].len() >= 2 && cap_b[2].len() >= 2 {
+        if cap_a.len() >= 2 && cap_b.len() >= 3
+            && cap_a[1].len() >= 2 && cap_b[2].len() >= 2 {
                 return cap_a[1][1] == cap_b[2][1] && cap_a[2][1] == cap_b[1][1];
             }
-        }
         true
     }
 
