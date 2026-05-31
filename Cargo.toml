@@ -1,0 +1,13 @@
+[package]
+name = "lau-mirror-symmetry"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/SuperInstance/lau-mirror-symmetry"
+description = "Mirror symmetry — the duality between symplectic and complex geometry: Calabi-Yau manifolds, Hodge diamonds, Gromov-Witten invariants, quantum cohomology, mirror maps, and homological mirror symmetry"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+nalgebra = "0.33"
+
+[dev-dependencies]
